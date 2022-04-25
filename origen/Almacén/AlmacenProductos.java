@@ -11,9 +11,7 @@ import java.util.Scanner;
  * @since 22/04/2020
  */
 public class AlmacenProductos {
-
     private static final Productos[] telefonos = new Productos[23];
-
     /**
      * Metodo para inicializar los productos del inventario.
      */
@@ -46,10 +44,7 @@ public class AlmacenProductos {
 
         telefonos[21] = new Productos("LG", "G7 ThinQ", 12, 268.35);
         telefonos[22] = new Productos("LG", "G8 ThinQ 128GB", 15, 485.05);
-
     }
-
-    
     /**
      * Procedimiento para modificar cuantas unidades hay en el inventario
      */
@@ -60,7 +55,6 @@ public class AlmacenProductos {
         System.out.println("Marca.");
         System.out.println("Modelo.");
         String tipo = datos.nextLine();
-
         if (tipo.equals("Marca")) {
             System.out.println("Indica la marca: ");
             String modificar = datos.nextLine();
@@ -134,25 +128,20 @@ public class AlmacenProductos {
             } catch (Exception e) {
                 System.out.println("El modelo introducido no es valido");
             }
-
         } else if (!tipo.equals("Marca")) {
             System.out.println("El parametro introducido no es valido.");
         } else if (!tipo.equals("Modelo")) {
             System.out.println("El parametro introducido no es valido.");
         }
     }
-
-
  /**
  * Procedimiento para listar los telefonos del inventario.
  */
     public static void listaInventario() {
         System.out.println("Lista de inventario telefónico");
         System.out.println(" ");
-
         mostrarProductos();
     }
-    
     /**
      * Procedimiento para mostar los productos.
      */
@@ -165,7 +154,6 @@ public class AlmacenProductos {
             System.out.println(" ");
         }
     }
-
     /**
      * Procedimiento para listar la cantidad de unidades del inventario.
      */
@@ -177,19 +165,15 @@ public class AlmacenProductos {
         System.out.println("");
 
         for (int i = 0; i < telefonos.length; i++) {
-
             cantidadTotal += telefonos[i].getCantidad();
             System.out.println(telefonos[i].getMarca() + " " + telefonos[i].getModelo());
             System.out.println(telefonos[i].getCantidad() + " unidades disponibles");
             System.out.println("");
         }
-
         System.out.println("Estas son las unidades que se han encontrado.");
         System.out.println("Cantidad total de unidades: " + cantidadTotal);
         System.out.println(" ");
-
     }
-
     /**
      * Nueva funcion disponible en el inventario para contar las unidades telefonicas disponibles.
      * 
@@ -202,7 +186,6 @@ public class AlmacenProductos {
         System.out.println("Cantidad total telefonos");
         System.out.println("____________________");
         System.out.println("");
-
         for (int i = 0; i < telefonos.length; i++) {
             cantidadFinal += telefonos[i].getCantidad();
         }
