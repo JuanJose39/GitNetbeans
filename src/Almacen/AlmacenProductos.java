@@ -191,7 +191,7 @@ public class AlmacenProductos {
     }
 
     /**
-     * Funcion para contar las unidades telefonicas disponibles.
+     * Nueva funcion disponible en el inventario para contar las unidades telefonicas disponibles.
      * 
      * @param cantidadInicial
      * @return cantidadFinal de unidades en el inventario.
